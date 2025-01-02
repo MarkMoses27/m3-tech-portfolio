@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --bg-color:#030c20;
+  --navbar-bg: #0f172a;
+  --text-color:#b8b5b5;
+  --white-color:#fff;
+  --fav-color:#280594;
+  --main-color:#cb6ce6;
+  --coloral-red:#ff5757;
+   --font-family: "Lato", serif;
+  --font-family1: "Poppins", serif;
+  --navbar-height: 4rem;
+  --transition-speed: 200ms;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: var(--font-family1);
+}
