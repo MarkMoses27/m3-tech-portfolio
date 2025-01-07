@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar"
 import HomePage from './components/Homepage/HomePage';
 import Footer from "./components/Footer";
 
-function App() {
+function App() {   
   return (
     <Router>
       <Navbar/>
