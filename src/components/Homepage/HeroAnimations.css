@@ -1,0 +1,76 @@
+/* HeroAnimations.css */
+
+/* Fade In Animation for Hero Section */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Glowing Effect for Hero Image */
+  @keyframes glowingEffect {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(64, 115, 158, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(64, 115, 158, 1);
+    }
+  }
+  
+  /* Dropdown Slide In Animation */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hero Section Animation */
+  .hero-section {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Hero Image Animation */
+  .hero-image {
+    animation: glowingEffect 3s ease-in-out infinite;
+  }
+  
+  /* Contact Dropdown Animation */
+  .contact-options {
+    animation: slideIn 0.3s ease-in-out;
+  }
+  
+  /* Optional Animation Delay for Staggered Appearance */
+  .welcome-text {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+  }
+  
+  .hero-title {
+    animation: fadeIn 1.2s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  .hero-description {
+    animation: fadeIn 1.4s ease-in-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: backwards;
+  }
+  
+  .btn {
+    animation: fadeIn 1.6s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+  

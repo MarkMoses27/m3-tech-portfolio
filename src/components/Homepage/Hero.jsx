@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import './Hero.css';
 import { BsWhatsapp, BsPhone } from 'react-icons/bs';
+import { FiChevronDown } from 'react-icons/fi';
 
 const Hero = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const toggleContactDropdown = () => {
+    setIsContactOpen(!isContactOpen);
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-container">
@@ -10,8 +18,9 @@ const Hero = () => {
           <div className="hero-image-wrapper">
             <img
               src="../../../src/assets/hero-image.svg"
-              alt="Portrait of Mark Moses - Creative Developer"
+              alt="Mark Moses - Creative Developer"
               className="hero-image"
+              loading="lazy"
             />
             <div className="image-shape"></div>
           </div>
@@ -26,32 +35,37 @@ const Hero = () => {
             Creative Developer
           </h1>
           <p className="hero-description">
-            A passionate full-stack developer with over 5 years of experience in creating
-            beautiful and functional web applications. Specialized in React, Node.js,
-            and modern web technologies.
+            A dedicated full-stack developer and graphic designer with 5+ years of experience. 
+            I specialize in Python, JavaScript, React, Node.js, modern web technologies, 
+            Adobe Creative Cloud, and Canva.
           </p>
 
           {/* Primary Buttons */}
           <div className="primary-buttons">
-            <button className="btn btn-primary">Hire Me</button>
-            <button className="btn btn-secondary">Know More</button>
+            <a href="#" className="btn btn-primary">Hire Me</a>
           </div>
 
-          {/* Contact Buttons */}
-          <div className="contact-buttons">
-            <a 
-              href="https://wa.me/254715137922" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="contact-btn whatsapp-btn"
+          {/* Contact Dropdown */}
+          <div className="contact-dropdown">
+            <button
+              className="btn contact-toggle"
+              onClick={toggleContactDropdown}
+              aria-expanded={isContactOpen}
             >
-              <BsWhatsapp size={20} />
-              <span>WhatsApp Me</span>
-            </a>
-            <a href="tel:+254715137922" className="contact-btn call-btn">
-              <BsPhone size={20} />
-              <span>Call Me</span>
-            </a>
+              Contact Me <FiChevronDown size={16} />
+            </button>
+            {isContactOpen && (
+              <div className="contact-options">
+                <a href="https://wa.me/254715137922" target="_blank" className="contact-btn whatsapp-btn">
+                  <BsWhatsapp size={20} />
+                  <span>WhatsApp</span>
+                </a>
+                <a href="tel:+254715137922" className="contact-btn call-btn">
+                  <BsPhone size={20} />
+                  <span>Call</span>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>

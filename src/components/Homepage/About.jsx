@@ -1,3 +1,4 @@
+// About.jsx
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode, faDatabase, faCogs, faDownload } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +8,7 @@ const About = () => {
   const skills = [
     {
       category: "Frontend Development",
-      icon: <FontAwesomeIcon icon={faLaptopCode} className="skill-icon" style={{ color: '#61DBFB' }} />, 
+      icon: <FontAwesomeIcon icon={faLaptopCode} className="skill-icon" aria-label="Frontend Development" style={{ color: '#61DBFB' }} />, 
       items: [
         { name: "React.js", level: 90, color: '#61DBFB' },
         { name: "JavaScript", level: 85, color: '#F7DF1E' },
@@ -16,7 +17,7 @@ const About = () => {
     },
     {
       category: "Backend Development",
-      icon: <FontAwesomeIcon icon={faDatabase} className="skill-icon" style={{ color: '#4CAF50' }} />, 
+      icon: <FontAwesomeIcon icon={faDatabase} className="skill-icon" aria-label="Backend Development" style={{ color: '#4CAF50' }} />, 
       items: [
         { name: "Node.js", level: 80, color: '#68A063' },
         { name: "Python", level: 75, color: '#306998' },
@@ -25,17 +26,18 @@ const About = () => {
     },
     {
       category: "Professional Services",
-      icon: <FontAwesomeIcon icon={faCogs} className="skill-icon" style={{ color: '#FF5733' }} />, 
+      icon: <FontAwesomeIcon icon={faCogs} className="skill-icon" aria-label="Professional Services" style={{ color: '#FF5733' }} />, 
       items: [
         { name: "LinkedIn Optimization", level: 90, color: '#0077B5' },
-        { name: "Graphic Design", level: 85, color: '#FF5733' },
+        { name: "Graphic Design (Adobe)", level: 90, color: '#FF5733' },
+        { name: "Canva Design", level: 85, color: '#FF61F6' },
         { name: "Tax Consultation", level: 75, color: '#FF6F61' },
         { name: "IT Consultation", level: 85, color: '#007ACC' },
       ],
     },
     {
       category: "Educational Services",
-      icon: <FontAwesomeIcon icon={faLaptopCode} className="skill-icon" style={{ color: '#FF61F6' }} />, 
+      icon: <FontAwesomeIcon icon={faLaptopCode} className="skill-icon" aria-label="Educational Services" style={{ color: '#FF61F6' }} />, 
       items: [
         { name: "Computer Tutoring", level: 90, color: '#4CAF50' },
         { name: "Cover Letter & Resume Revamp", level: 95, color: '#A259FF' },
@@ -43,7 +45,7 @@ const About = () => {
     },
     {
       category: "Other Skills",
-      icon: <FontAwesomeIcon icon={faGitAlt} className="skill-icon" style={{ color: '#F05033' }} />, 
+      icon: <FontAwesomeIcon icon={faGitAlt} className="skill-icon" aria-label="Other Skills" style={{ color: '#F05033' }} />, 
       items: [
         { name: "Git/GitHub", level: 90, color: '#F05033' },
         { name: "DevOps", level: 75, color: '#007ACC' },
@@ -65,12 +67,12 @@ const About = () => {
           <div className="about-text">
             <h3 className="about-title">Professional Summary</h3>
             <p className="about-description">
-              With over 5 years of experience in web development, professional services, and education, I specialize in creating impactful solutions tailored to individual and business needs.
+              5 years of experience in web development, professional services, and education, I specialize in creating impactful solutions tailored to individual and business needs. Proficient in modern web technologies, Adobe Creative Cloud, and Canva.
             </p>
 
             <div className="experience-boxes">
               <div className="exp-box">
-                <h4>05+</h4>
+                <h4>07+</h4>
                 <p>Years of<br />Experience</p>
               </div>
               <div className="exp-box">
@@ -84,8 +86,10 @@ const About = () => {
             </div>
 
             <button className="download-cv">
-              <FontAwesomeIcon icon={faDownload} className="download-icon" />
-              Download CV
+              <a href="Mark_Moses_CV.pdf" download="Mark_Moses_CV">
+                <FontAwesomeIcon icon={faDownload} className="download-icon" />
+                Download CV
+              </a>
             </button>
           </div>
 

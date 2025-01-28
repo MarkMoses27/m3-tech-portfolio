@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import  { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/logo.svg";
 import "./Navbar.css";
@@ -12,18 +12,24 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <img src={logo} alt="TECHs Logo" style={{ height: "60px", width: "auto" }} />TECH
+          <img src={logo} alt="M3 Tech Logo" className="logo" />
+          <span className="logo-text">M3 TECH</span>
         </Link>
-        <div className="menu-icon" onClick={toggleMenu}>
-          {isOpen ? <FaTimes /> : <FaBars />}
+
+        {/* Menu Button (Only Visible on Mobile) */}
+        <div className="menu-container" onClick={toggleMenu}>
+          {isOpen ? <FaTimes className="menu-icon" /> : <FaBars className="menu-icon" />}
         </div>
-        <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
+
+        {/* Navigation Menu */}
+        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
             <Link to="/" className="nav-links">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/know" className="nav-links">Know Me</Link>
+            <Link to="/about" className="nav-links">Know Me</Link>
           </li>
           <li className="nav-item">
             <Link to="/projects" className="nav-links">Projects</Link>
@@ -35,6 +41,8 @@ const Navbar = () => {
             <Link to="/contact" className="nav-links">Contact</Link>
           </li>
         </ul>
+
+        {/* Hire Me Button */}
         <div className="hire-me-button">
           <Link to="/hire-me">
             <button className="btn-hire">Hire Me</button>
